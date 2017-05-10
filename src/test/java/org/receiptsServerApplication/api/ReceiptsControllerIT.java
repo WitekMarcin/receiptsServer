@@ -13,14 +13,15 @@ import org.receiptsServerApplication.service.RecipeProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -40,7 +41,16 @@ public class ReceiptsControllerIT {
     }
 
     @Test
-    public void testCreationOfANewProjectSucceeds() throws Exception {
+    public void testBodyHasToBeNotEmpty() throws Exception {
+        mockMvc.perform(
+                post("/sendRecipe")
+                        .accept(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+    }
+
+    @Test
+    public void testOnlyPostMethodIsAllowed() throws Exception {
         RecipeProvider recipe = new RecipeProvider();
         recipe.setPathToThePicture("MyName");
         String json = new Gson().toJson(recipe);
@@ -50,7 +60,14 @@ public class ReceiptsControllerIT {
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(json))
-                .andExpect(mvcResult -> mvcResult.getResponse().toString().equals(HttpStatus.OK));
+                .andExpect(status().isOk());
+
+        mockMvc.perform(
+                get("/sendRecipe")
+                        .accept(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json))
+                .andExpect(status().isMethodNotAllowed());
     }
 
 }
