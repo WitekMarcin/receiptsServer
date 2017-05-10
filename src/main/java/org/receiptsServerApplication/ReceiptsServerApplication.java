@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) Marcin Witek 2017
  */
