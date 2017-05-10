@@ -7,6 +7,7 @@ package org.receiptsServerApplication.api;
 import org.receiptsServerApplication.model.RecipeProvider;
 import org.receiptsServerApplication.service.RecipeProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -26,9 +27,7 @@ public class ReceiptsController {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RecipeProvider> saveRecipe(@RequestBody RecipeProvider recipe) {
 
-
-
-        return null;
+        return new ResponseEntity<RecipeProvider>(HttpStatus.OK);
     }
 
 
