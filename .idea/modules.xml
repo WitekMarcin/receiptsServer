@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ReceiptsApi.iml" filepath="$PROJECT_DIR$/ReceiptsApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/receipts.iml" filepath="$PROJECT_DIR$/.idea/modules/receipts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/receipts_main.iml" filepath="$PROJECT_DIR$/.idea/modules/receipts_main.iml" group="receipts" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/receipts_test.iml" filepath="$PROJECT_DIR$/.idea/modules/receipts_test.iml" group="receipts" />
     </modules>
   </component>
 </project>
