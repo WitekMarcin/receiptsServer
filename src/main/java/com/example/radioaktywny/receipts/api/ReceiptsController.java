@@ -2,10 +2,10 @@
  * Copyright (c) Marcin Witek 2017
  */
 
-package org.receiptsServerApplication.api;
+package com.example.radioaktywny.receipts.api;
 
-import org.receiptsServerApplication.model.RecipeProvider;
-import org.receiptsServerApplication.service.RecipeProviderService;
+import com.example.radioaktywny.receipts.model.RecipeProvider;
+import com.example.radioaktywny.receipts.service.RecipeProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

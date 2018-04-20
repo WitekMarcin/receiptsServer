@@ -2,10 +2,10 @@
  * Copyright (c) Marcin Witek 2017
  */
 
-package org.receiptsServerApplication.service;
+package com.example.radioaktywny.receipts.service;
 
-import org.receiptsServerApplication.model.RecipeProvider;
-import org.receiptsServerApplication.repository.RecipeProviderRepository;
+import com.example.radioaktywny.receipts.model.RecipeProvider;
+import com.example.radioaktywny.receipts.repository.RecipeProviderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

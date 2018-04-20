@@ -2,9 +2,9 @@
  * Copyright (c) Marcin Witek 2017
  */
 
-package org.receiptsServerApplication.repository;
+package com.example.radioaktywny.receipts.repository;
 
-import org.receiptsServerApplication.model.RecipeProvider;
+import com.example.radioaktywny.receipts.model.RecipeProvider;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

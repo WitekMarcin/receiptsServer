@@ -2,9 +2,9 @@
  * Copyright (c) Marcin Witek 2017
  */
 
-package org.receiptsServerApplication.service;
+package com.example.radioaktywny.receipts.service;
 
-import org.receiptsServerApplication.model.RecipeProvider;
+import com.example.radioaktywny.receipts.model.RecipeProvider;
 
 /**
  * Created by Marcin  on 10.05.2017.

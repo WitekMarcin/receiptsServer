@@ -2,7 +2,7 @@
  * Copyright (c) Marcin Witek 2017
  */
 
-package org.receiptsServerApplication.model;
+package com.example.radioaktywny.receipts.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
